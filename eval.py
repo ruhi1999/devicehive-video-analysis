@@ -40,8 +40,9 @@ def evaluate(_):
         video = videoPafy.getbest(preftype="mp4").url
 
     cam = cv2.VideoCapture(video)
-    if not cam.isOpened():
-        raise IOError('Can\'t open "{}"'.format(FLAGS.video))
+    """commented to find source file"""
+    """ if not cam.isOpened():
+        raise IOError('Can\'t open "{}"'.format(FLAGS.video))"""
 
     source_h = cam.get(cv2.CAP_PROP_FRAME_HEIGHT)
     source_w = cam.get(cv2.CAP_PROP_FRAME_WIDTH)
